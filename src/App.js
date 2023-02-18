@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import ProfilesList from "./components/ProfilesList/ProfilesList";
 import InfiniteScroll from "./components/InfiniteScroll/InfiniteScroll";
+import ErrorBox from "./components/Error/ErrorBox";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,8 +44,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <ProfilesList profiles={profiles} />
-      {!isLoading && (
+      {isError ? <ErrorBox /> : <ProfilesList profiles={profiles} />}
+      {!isLoading && !isError && (
         <InfiniteScroll fetchMore={fetchMoreData} isLoading={isLoading} />
       )}
     </div>
