@@ -1,0 +1,43 @@
+.profile-card {
+  display: flex;
+  width: 500px;
+  height: 150px;
+  margin: 20px 0;
+}
+
+.profile-image {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profile-image img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.profile-title {
+  width: 250px;
+}
+
+.profile-title p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-time {
+  font-size: 0.8rem;
+  color: grey;
+  margin-top: 10px;
+}
